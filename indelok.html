@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Менің Резюмем</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    .container {
+      width: 80%;
+      margin: auto;
+      overflow: hidden;
+    }
+    header {
+      background: #333;
+      color: #fff;
+      padding-top: 30px;
+      min-height: 70px;
+      border-bottom: #77aaff 3px solid;
+    }
+    header h1 {
+      text-align: center;
+      text-transform: uppercase;
+      margin: 0;
+    }
+    .photo {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .photo img {
+      border-radius: 55%;
+      width: 200px;
+      height: 200px;
+    }
+    .bio, .achievements, .future, .history {
+      background: #fff;
+      color: #333;
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 5px;
+    }
+    .achievement-section, .future-profession, .bio-section {
+      background: #fff;
+      color: #333;
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 5px;
+      display: none;
+    }
+    a.achievement-link, a.future-profession-link, a.bio-link {
+      text-decoration: none;
+      color: #77aaff;
+    }
+    a.achievement-link:hover, a.future-profession-link:hover, a.bio-link:hover {
+      text-decoration: underline;
+    }
+    a.back-link {
+      text-decoration: none;
+      color: #77aaff;
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+    }
+    a.back-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Менің Резюмем</h1>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="photo">
+      <img src="img/вававаа.gif" alt="Менің фотом">
+    </div>
+    <div class="bio">
+      <h2>Автобиография</h2>
+      <p><a href="javascript:void(0);" onclick="showBio()">Орақ Асет Сисенұлы</a></p>
+    </div>
+    <div class="achievements">
+      <h2>Жетістіктер</h2>
+      <p><a class="achievement-link" href="javascript:void(0);" onclick="showAchievements()">Жетістіктерді көру үшін басыңыз</a></p>
+    </div>
+    <div class="future">
+      <h2>Болашақ мамандық</h2>
+      <p><a class="future-profession-link" href="javascript:void(0);" onclick="showFutureProfession()">Кіру үшін басыңыз</a></p>
+    </div>
+    <div class="history">
+      <h2>Тарихта қалдыратын із</h2>
+      <p><a href="javascript:void(0);" onclick="showHistory()">Тарихта қалдыратын із туралы көру</a></p>
+    </div>
+
+    <div class="achievement-section" id="sports">
+      <h2>Спорт</h2>
+      <p>Менің спорттағы жетістіктерім: Футбол, Дзюдо, Бокс, Шахмат, Теннис.</p>
+      <a class="back-link" href="javascript:void(0);" onclick="backToResume()">Алдыңғы бетке оралу</a>
+    </div>
+    <div class="achievement-section" id="art">
+      <h2>Өнер</h2>
+      <p>Менің өнер саласындағы жетістіктерім: Домбыра үйірмесіне қатысу.</p>
+      <a class="back-link" href="javascript:void(0);" onclick="backToResume()">Алдыңғы бетке оралу</a>
+    </div>
+    <div class="achievement-section" id="education">
+      <h2>Білім</h2>
+      <p>Менің білім саласындағы жетістіктерім: РФММ мектебіне іріктеуден өту және Алматы қаласына арман қуып келу.</p>
+      <a class="back-link" href="javascript:void(0);" onclick="backToResume()">Алдыңғы бетке оралу</a>
+    </div>
+
+    <div class="future-profession" id="oil-profession">
+      <h2>МҰНАЙШЫ мамандығы</h2>
+      <p>Мұнайшы — мұнай мен газ өндіру саласында жұмыс істейтін маман. Бұл мамандықта жұмыс істеу үшін геология, мұнай мен газ өндірудің техникалық және экономикалық аспектілерін білу қажет. Мұнайшының жұмысы әртүрлі қадамдарды қамтиды, оның ішінде бұрғылау, мұнай мен газды өңдеу және тасымалдау, сондай-ақ экологиялық талаптарды сақтау.</p>
+      <a class="back-link" href="javascript:void(0);" onclick="backToResume()">Алдыңғы бетке оралу</a>
+    </div>
+
+    <div class="bio-section" id="bio">
+      <h2>Орақ Асет Сисенұлы</h2>
+      <p>Өзім туралы айта кетсек: Мен Орақ Әсет Сисенұлы 13 мамыр 2009 жылы Маңғыстау облысы Жаңаөзен қаласында дүниеге келдім. Кішкентай кезімнен белсенді жыбырлақ бала болдым. 2015 жылы №12 мектебінде бастауыш сыныбын оқып бастаған болатынмын. 4 сынып аяқтағаннан кейін №5 "Дарын" мектебіне ауыстып, 7 сынып бітіргенге дейін оқыдым. Жазда РФММ мектебіне экзамен тапсырып 8 сыныптан бастап осы мектепте оқып жатырмын. 2026 жылы мектепті аяқтаймын. Және кішкентай кезімнен домбыра, дзюдо, бокс спорт түрлерімен айналыстым. Бірақта ең жақсы көретін спорт түрі ол футбол.</p>
+      <a class="back-link" href="javascript:void(0);" onclick="backToResume()">Алдыңғы бетке оралу</a>
+    </div>
+
+    <div class="bio-section" id="history">
+      <h2>Менің тарихта қалдыратын ізім</h2>
+      <p>Менің тарихта қалдыратын ізім — өмірде әрқашан ізгілік пен мейірімділікпен жүріп, жастарға үлгі болу, адамдарға көмектесу және қоғамда оң өзгерістер енгізу. Менің мақсатым — білім алудан және спорттан жоғары нәтижелерге жетуден басқа, өзімнің айналамдағыларға да көмек қолын созып, қоғамға пайдалы адам болу.</p>
+      <a class="back-link" href="javascript:void(0);" onclick="backToResume()">Алдыңғы бетке оралу</a>
+    </div>
+  </div>
+
+  <script>
+    function showBio() {
+      document.querySelector('.bio').style.display = 'none';
+      document.querySelector('.achievements').style.display = 'none';
+      document.querySelector('.future').style.display = 'none';
+      document.querySelector('.history').style.display = 'none';
+      document.getElementById('bio').style.display = 'block';
+    }
+
+    function showAchievements() {
+      document.querySelector('.bio').style.display = 'none';
+      document.querySelector('.achievements').style.display = 'none';
+      document.querySelector('.future').style.display = 'none';
+      document.querySelector('.history').style.display = 'none';
+      document.getElementById('sports').style.display = 'block';
+      document.getElementById('art').style.display = 'block';
+      document.getElementById('education').style.display = 'block';
+    }
+
+    function showFutureProfession() {
+      document.querySelector('.bio').style.display = 'none';
+      document.querySelector('.achievements').style.display = 'none';
+      document.querySelector('.future').style.display = 'none';
+      document.querySelector('.history').style.display = 'none';
+      document.getElementById('oil-profession').style.display = 'block';
+    }
+
+    function showHistory() {
+      document.querySelector('.bio').style.display = 'none';
+      document.querySelector('.achievements').style.display = 'none';
+      document.querySelector('.future').style.display = 'none';
+      document.querySelector('.history').style.display = 'none';
+      document.getElementById('history').style.display = 'block';
+    }
+
+    function backToResume() {
+      document.querySelector('.bio').style.display = 'block';
+      document.querySelector('.achievements').style.display = 'block';
+      document.querySelector('.future').style.display = 'block';
+      document.querySelector('.history').style.display = 'block';
+      document.getElementById('sports').style.display = 'none';
+      document.getElementById('art').style.display = 'none';
+      document.getElementById('education').style.display = 'none';
+      document.getElementById('oil-profession').style.display = 'none';
+      document.getElementById('bio').style.display = 'none';
+      document.getElementById('history').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
